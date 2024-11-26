@@ -2,19 +2,13 @@
 import Input from "@/components/partials/elements/input/Input";
 
 const page = () => {
-  const handleSubmit = (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
   };
-  console.log("rendered");
+
   return (
     <div className="max-w-96">
-      <form onSubmit={handleSubmit}>
-        <Input name="name" className="focus:outline-none border" />
-        <Input
-          name="number"
-          type="number"
-          className="focus:outline-none border"
-        />
+      <form onSubmit={handleLogin}>
         <Input
           name="email"
           type="email"
@@ -25,13 +19,8 @@ const page = () => {
           type="password"
           className="focus:outline-none border"
         />
-        <Input
-          name="confirmPassword"
-          type="password"
-          placeholder={"Cofirm Password"}
-          className="focus:outline-none border"
-        />
-        <button type="submit">Sign up</button>
+
+        <button type="submit">Login</button>
       </form>
     </div>
   );
