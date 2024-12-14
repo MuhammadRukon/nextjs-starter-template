@@ -12,9 +12,10 @@ export const LinkItem = ({ href, label, isActive, handleClose }) => (
   <Link
     href={href}
     onClick={handleClose}
-    className={`relative y-1 text-nowrap md:py-2 text-xs lg:text-sm font-normal
+    aria-label={label}
+    className={`relative text-nowrap md:py-2 text-xs lg:text-sm
       after:bg-secondary after:transition-all after:duration-300 
-      after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[2px] ${
+      after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[0.125rem] ${
         isActive ? "after:w-[80%]" : "after:w-[0%]"
       }`}
   >

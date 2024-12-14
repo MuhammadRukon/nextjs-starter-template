@@ -1,6 +1,6 @@
 import { CgMenuRightAlt } from "react-icons/cg";
 import { LinkItem } from "../navItems/navItems";
-import HeaderButton from "@/components/partials/elements/buttons/HeaderButton";
+import HeaderButton from "@/components/elements/buttons/HeaderButton";
 const Dropdown = ({ isOpen, handleToggle, handleCloseMenu, items }) => {
   return (
     <div className="p-2 my-3 rounded-lg text-xs cursor-pointer">

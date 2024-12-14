@@ -6,7 +6,7 @@ const layout = ({ children }) => {
   return (
     <div className="font-montserrat">
       <Header />
-      <div className="min-h-[calc(100dvh-143px)]">{children}</div>
+      <div className="">{children}</div>
       <Footer />
     </div>
   );

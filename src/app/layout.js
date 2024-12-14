@@ -14,7 +14,7 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "Client",
-  description: "Created by Antopolis",
+  description: "Created By You Know Who",
 };
 
 export default function RootLayout({ children }) {
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="font-montserrat">{children}</div>
+        {children}
       </body>
     </html>
   );

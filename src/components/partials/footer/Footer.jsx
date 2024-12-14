@@ -1,4 +1,4 @@
-import Container from "../elements/container/Container";
+import Container from "../../elements/container/Container";
 
 const Footer = () => {
   return (

@@ -1,5 +1,5 @@
 "use client";
-import Input from "@/components/partials/elements/input/Input";
+import Input from "@/components/elements/form/Input";
 
 const page = () => {
   const handleLogin = (e) => {

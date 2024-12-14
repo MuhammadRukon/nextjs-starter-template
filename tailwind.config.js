@@ -8,12 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "var(--primary)",
-        secondary: "var(--secondary)",
-        tertiary: "var(--tertiary)",
-      },
-      fontFamily: {
-        montserrat: "'Montserrat', sans-serif",
+        primary: "rgb(239, 90, 32)",
+        secondary: "rgb(239, 90, 32)",
       },
     },
   },
