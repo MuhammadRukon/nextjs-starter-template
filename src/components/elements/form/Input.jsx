@@ -1,9 +1,10 @@
-import React, { useState, useId } from "react";
+import React, { useState } from "react";
 
 const Input = ({
   type = "text",
-  name = "",
-  id = useId(),
+  value,
+  name,
+  setValue,
   placeholder = name[0]?.toUpperCase() + name.slice(1),
   className = "",
   labelText = placeholder,
@@ -11,7 +12,7 @@ const Input = ({
   labelClassName = "",
   wrapperClassName = "",
 }) => {
-  const [value, setValue] = useState("");
+  // const [innerValue, setInnerValue] = useState("");
 
   const handleNumberChange = (e) => {
     /^[0-9+]*$/.test(e.target.value) && setValue(e.target.value);
@@ -26,16 +27,25 @@ const Input = ({
       )}
       <input
         type={type === "number" ? "text" : type}
-        name={name}
+        value={value}
         {...(type === "number"
           ? {
-              value: value,
               onChange: handleNumberChange,
             }
-          : null)}
-        id={id}
+          : {
+              onChange: (e) => setValue(e.target.value),
+            })}
+        // {...(type === "number"
+        //   ? {
+        //       value: innerValue,
+        //       onChange: handleNumberChange,
+        //     }
+        //   : {
+        //       value: value,
+        //       onChange: (e) => setValue(e.target.value),
+        //     })}
         placeholder={placeholder}
-        className={`w-full py-2 px-4 ${className}`}
+        className={`${className}  w-full py-2 px-4 focus:outline-none border`}
       />
     </div>
   );
